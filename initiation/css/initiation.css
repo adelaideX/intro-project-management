@@ -1,0 +1,76 @@
+body {
+    font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif;
+    height: auto;
+}
+#footer {
+    border-top: thin solid #999;
+    font-size: 80%;
+    margin-top: 9ex;
+    margin-bottom: 5ex;
+    padding-top: 0.5ex;
+    width: 100%;
+}
+#footer .copyright-link {
+    padding: 0;
+    text-align: left;
+}
+#footer .usage {
+    white-space: nowrap;
+    display: inline-block;
+}
+#footer .references-link {
+    padding: 0;
+    text-align: right;
+}
+#questions {
+    border: thin solid #ccc;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+.question {
+    position: relative;
+    font-size: 79%;
+}
+.question-text {
+    display: inline;
+}
+.show-answer {
+    display: none;
+}
+.correct .fa {
+    color: #99C68E;
+    font-size: 200%;
+}
+.incorrect .fa {
+    color: #E55451;
+    font-size: 200%;
+}
+.question .correct {
+    visibility: hidden;
+    display: inline;
+}
+.question .incorrect {
+    visibility: hidden;
+    display: none;
+}
+.question.correct .correct,
+.question.incorrect .incorrect {
+    visibility: visible;
+    display: inline;
+}
+.question.correct .incorrect,
+.question.incorrect .correct {
+    display: none;
+}
+/* Borrowed from Foundation 6 */
+.callout {
+    margin: 0 0 1rem;
+    padding: 1rem;
+    border: 1px solid rgba(10,10,10,.25);
+    border-radius: 0;
+    position: relative;
+    background-color: #fff;
+}
+.callout.primary {
+    background-color: #def0fc;
+}
