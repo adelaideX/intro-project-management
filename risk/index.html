@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Risk Framework: Introduction to Project Management</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/foundation.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/risk.css" />
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/risk.js"></script>
+    <script src="/course.units/edx/js/ga.js"></script>
+</head>
+<body>
+<div id="content" class="small-centered columns">
+    <div class="row">
+    <h1>Project Risk Framework</h1>
+    <div id="questions">
+        <table border="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Risk Category</th>
+                <th>Potential Risk Areas</th>
+                <th>What would constitute a "low risk" (e.g. score 1)</th>
+                <th>What would constitute a "very high risk" (e.g. score 5)</th>
+                <th>Score by category<br/>(1-5)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><label for="risk-political">Political</label></th>
+                <td>Project governance</td>
+                <td>Clear and effective</td>
+                <td>Unclear and ineffective</td>
+                <td class="input" rowspan="3"><input type="text" id="risk-political" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Local government</td>
+                <td>No involvement/passive</td>
+                <td>Active/Obstructive</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Reputational Issues</td>
+                <td>Standard build</td>
+                <td>High profile development</td>
+            </tr>
+
+            <tr class="shade">
+                <th><label for="risk-economic">Economic</label></th>
+                <td>Schedule</td>
+                <td>Realistic</td>
+                <td>Aggressive/Unrealistic</td>
+                <td class="input" rowspan="3"><input type="text" id="risk-economic" /></td>
+            </tr>
+            <tr class="shade">
+                <td>&nbsp;</td>
+                <td>Raw Material Supply</td>
+                <td>Secured and predictable pricing</td>
+                <td>Uncertain and price volatility</td>
+            </tr>
+            <tr class="shade">
+                <td>&nbsp;</td>
+                <td>Local Wage Inflation</td>
+                <td>Low and static</td>
+                <td>High and volatile</td>
+            </tr>
+            <tr>
+                <th><label for="risk-social">Social</label></th>
+                <td>Stakeholder involvement</td>
+                <td>Non/passive</td>
+                <td>Active/Obstructive</td>
+                <td class="input" rowspan="3"><input type="text" id="risk-social" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Demographics of the neighbourhood</td>
+                <td>Broad, with weak cultural influences</td>
+                <td>Concentrated, strong cultural influences</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Access by road/rail</td>
+                <td>Easy accessibility</td>
+                <td>Difficult to access site</td>
+            </tr>
+            <tr class="shade">
+                <th><label for="risk-technology">Technology</label></th>
+                <td>Project complexity</td>
+                <td>Simple</td>
+                <td>Complex</td>
+                <td class="input" rowspan="3"><input type="text" id="risk-technology" /></td>
+            </tr>
+            <tr class="shade">
+                <td>&nbsp;</td>
+                <td>Project requirements and scope definition</td>
+                <td>Well Defined</td>
+                <td>Poorly Defined</td>
+            </tr>
+            <tr class="shade">
+                <td>&nbsp;</td>
+                <td>Technology</td>
+                <td>Standard</td>
+                <td>New/Unproven</td>
+            </tr>
+
+            <tr>
+                <th><label for="risk-legal">Legal</label></th>
+                <td>3rd party permissions required</td>
+                <td>Minimal</td>
+                <td>Major Effort with Unclear Requirements</td>
+                <td class="input" rowspan="3"><input type="text" id="risk-legal" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Industrial Relations</td>
+                <td>Good</td>
+                <td>Militant Trade Unions</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Loan finance availability for buyers</td>
+                <td>Low interest rates, credit availability</td>
+                <td>High interest rates, credit tight</td>
+            </tr>
+            <tr class="shade">
+                <th><label for="risk-environmental">Environmental</label></th>
+                <td>Project location</td>
+                <td>Well known</td>
+                <td>Unknown, first presence</td>
+                <td class="input" rowspan="3"><input type="text" id="risk-environmental" /></td>
+            </tr>
+            <tr class="shade">
+                <td>&nbsp;</td>
+                <td>Environment/Climate</td>
+                <td>Moderate</td>
+                <td>Harsh</td>
+            </tr>
+            <tr class="shade">
+                <td>&nbsp;</td>
+                <td>Environmental regulation</td>
+                <td>Easy to understand and comply</td>
+                <td>Complex and restrictive</td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th colspan="4"><label for="risk-total">Total Score (maximum 30)</label></th>
+                <td class="input">
+                    <input type="text" readonly id="risk-total" />
+                </td>
+            </tr>
+        </thead>
+        </table>
+    </div>
+
+    <div id="buttons" class="row">
+        <div class="columns small-12">
+            <div id="check" class="button" tabindex="0">Check</div>
+        </div>
+        <div id="feedback" class="columns small-12">
+                <div class="feedback callout success" max-score="9">
+                <h4>Low risk project</h4>
+                <p>
+                In this situation you can proceed with the
+                project as planned. Although you will take all of the necessary
+                precautions while engaging in the project, the project
+                environment (PESTLE) appears to be well known and risks
+                understood. Ensure stakeholders are kept in the loop during
+                execution. 
+                </p>
+                </div>
+                <div class="feedback callout primary" max-score="17">
+                <h4>Medium risk project</h4>
+                <p>
+                Review the risk categories in your PESTLE
+                rating/score that have higher scores. These categories will
+                point towards potential challenges and risks in executing your
+                project. Try to identify ways to reduce or eliminate these risks
+                before proceeding.  Communicate with stakeholders and your team
+                to consider different approaches to respond to these risks.
+                </p>
+                </div>
+                <div class="feedback callout warning" max-score="25">
+                <h4>Higher risk project</h4>
+                <p>
+                If your project reflects a higher risk profile,
+                it is often good idea to revisit your project idea/concept and
+                explore alternative options by applying some critical and
+                creative thinking techniques. In such a situation, take time to
+                rethink your approach and then re-do the PESTLE profile. Before
+                proceeding with your project, it is advisable that you take
+                sufficient time to engage with your team and broader
+                stakeholders to identify appropriate risk responses to reduce
+                the likelihood and impact of these risks on your project during
+                execution.
+                </p>
+                </div>
+                <div class="feedback callout error" max-score="30">
+                <h4>High risk project</h4>
+                <p>In a high-risk project, take a step back and consider
+                all of the alternatives before making a decision to continue
+                with the project. Should you decide to proceed, you will need to
+                ensure that the identified high risks categories and items are
+                adequately addressed and appropriate contingencies are in put
+                into place. Such risks will require constant monitoring and
+                review to ensure you remain on top of various mitigation
+                actions.  Good communication with your project team and other
+                stakeholders is essential.   Where the risk profile indicates an
+                extremely high risk, one option might be to avoid the project
+                entirely. Alternately, reconsider all of the planning and seek
+                non-traditional approaches in order to consider the project in a
+                different way, where risks might be better understood or where
+                risks can be reduced - or for instance eliminated by
+                transferring them to other parties (such as experienced
+                contractors).
+                </p>
+                </div>
+                <div class="feedback na callout error">
+                Invalid score, please check above.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="copyright-link columns small-6">
+            <a href="http://www.adelaide.edu.au/legals/copyright.html">© The University of Adelaide</a>, 
+            <div class="usage">all rights reserved</div>
+        </div>
+        <div class="references-link columns small-6">
+            <a href="#" data-reveal-id="ref" data-reveal-ajax="ref.html">References</a>
+        </div>
+        <div id="ref" class="reveal-modal" data-reveal></div>
+    </div>
+</div>
+</body>
+</html>

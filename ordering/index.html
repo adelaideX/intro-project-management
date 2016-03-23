@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ordering Dependent Tasks : Introduction to Project Management</title>
+    <link rel="stylesheet" type="text/css" href="css/foundation.min.css" />
+    <link rel="stylesheet" type="text/css" href="jQuery.Gantt/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/ordering.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <script src="jQuery.Gantt/js/jquery.min.js"></script>
+    <script src="jQuery.Gantt/js/jquery.fn.gantt.min.js"></script>
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/pointer_events_polyfill.js"></script>
+    <script src="js/ordering.js"></script>
+</head>
+<body>
+<div id="content" class="small-centered columns">
+  <div class="row">
+    <h1>Ordering Dependent Tasks</h1>
+  </div>
+  <div class="gantt-wrapper">
+      <div class="gantt reset"></div>
+      <div id="out-of-scope"></div>
+  </div>
+  <div class="row">
+      <div class="columns medium-3  small-4"><div id="check" class="button" tabindex="0">Check</div></div>
+  </div>
+  <div class="row">
+      <div class="columns small-11 small-centered" id="feedback">
+        <div class="callout"></div>
+        <h4>Dependencies</h4>
+          <p><em>Click on the coloured boxes below for more detailed feedback.</em></p>
+          <ul id="legend">
+            <li class="fn-gantt" tabindex="0">
+                <i class="fa fa-plus"></i> 
+                <i class="fa fa-minus"></i> 
+                    <div class="bar ganttGreen">Green tasks</div> must happen first, in the correct order.
+                    <div class="tasks">
+                    <ul>
+                        <li>The Lot must be prepared before the Foundation can be laid.</li>
+                        <li>The Fountation must be laid before the Wall Frames can be constructed.</li>
+                    </ul>
+                    </div>
+            </li>
+            <li class="fn-gantt" tabindex="0">
+                <i class="fa fa-plus"></i> 
+                <i class="fa fa-minus"></i> 
+                    <div class="bar ganttOrange">Orange tasks</div> happen second, in any order.
+                    <div class="tasks">
+                    <ul>
+                        <li>Plumbing and Wiring can be installed once the Wall Frames are done.</li>
+                        <li>Exterior walls can be constructed once the Wall Frames are done.</li>
+                        <li>Roof Frames can be constructed once the Wall Frames are done.</li>
+                    </ul>
+                    </div>
+            </li>
+            <li class="fn-gantt" tabindex="0">
+                <i class="fa fa-plus"></i> 
+                <i class="fa fa-minus"></i> 
+                    <div class="bar ganttRed">Red tasks</div> happen third, careful about the order.
+                    <div class="tasks">
+                    <ul>
+                        <li>Roof can be covered once the Roof Frames are done.</li>
+                        <li>Interior Walls can be constructed once the Roof is covered.</li>
+                        <li>Interior can be finished once the Interior walls are constructed.</li>
+                        <li>Exterior can be finished once the Roof is covered.</li>
+                    </ul>
+                    </div>
+            </li>
+            <li class="fn-gantt" tabindex="0">
+                <i class="fa fa-plus"></i> 
+                <i class="fa fa-minus"></i> 
+                    <div class="bar ganttGrey">Grey tasks</div> are out of scope, put these last.
+                    <div class="tasks">
+                    <ul>
+                        <li>A swimming pool can be added after the house is done.</li>
+                        <li>A back pergola would be nice to have.</li>
+                        <li>A double garage would be nice, but is not required.</li>
+                    </ul>
+                    </div>
+            </li>
+          </ul>
+      </div>
+  </div></div>
+  <div id="footer">
+    <div class="copyright-link columns small-6">
+        <a href="http://www.adelaide.edu.au/legals/copyright.html">© The University of Adelaide</a>, 
+        <div class="usage">all rights reserved</div>
+    </div>
+    <div class="references-link columns small-6">
+        <a href="#" data-reveal-id="ref" data-reveal-ajax="ref.html">References</a>
+    </div>
+    <div id="ref" class="reveal-modal" data-reveal></div>
+  </div>
+</div>
+</body>
+</html>
